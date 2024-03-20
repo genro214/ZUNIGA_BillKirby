@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Home</ion-title>
+    <ion-title> second-custom-page</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Page 2</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -24,12 +24,12 @@
     </p>
   </div>
   <div class="navigation-buttons">
-    <ion-button [href]="linkAuthenticate ? 'my-custom-page' : '/blank'"
+    <ion-button [href]="linkAuthenticate ? 'third-custom-page' : '/blank'"
       >Go to custom page by link</ion-button
     >
     <ion-button (click)="goToCustomPage()">
       Go to custom page by Event
     </ion-button>
-    <ion-button (click)="goWithAuthentication()">Authenticate</ion-button>
+    <ion-button (click)="goWithAuthentication()"> Authenticate</ion-button>
   </div>
 </ion-content>

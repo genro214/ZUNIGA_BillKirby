@@ -1,16 +1,14 @@
-import { Component } from '@angular/core';
-import { MyCustomPagePage } from '../my-custom-page/my-custom-page.page';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-my-custom-page',
+  templateUrl: './my-custom-page.page.html',
+  styleUrls: ['my-custom-page.scss'],
 })
-export class HomePage {
+export class MyCustomPagePage {
   linkAuthenticate = false;
-
   constructor(
     private AuthenticationService: AuthenticationService,
     private router: Router
@@ -27,9 +25,7 @@ export class HomePage {
 
   goToCustomPage() {
     if (this.AuthenticationService.authenticate) {
-      this.AuthenticationService.currentPage = 2;
-      this.router.navigate(['my-custom-page']);
-      this.AuthenticationService.authenticate = false;
+      this.router.navigate(['third-custom-page']);
     } else {
       alert('Please Authenticate first');
     }
