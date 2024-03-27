@@ -1,39 +1,14 @@
-import { ReturnStatement } from '@angular/compiler';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
-  fetchData(authenticate: boolean): Promise<string> {
-    return new Promise((resolve, reject) => {
-      if (authenticate) {
-        setTimeout(() => {
-          resolve('Data fetched successfully');
-        }, 2000);
-      } else {
-        setTimeout(() => {
-          reject('Authentication failed');
-        }, 2000);
-      }
-    });
+  fetchData(): Observable<any> {
+    return this.http.get<any>('https://pokeapi.co/api/v2/region/');
   }
 }
-  
-  // fetchData() {
-  // return new Promise((resolve, reject) => {
-  //   const errorCondition = false;
-    
-  //   if (errorCondition) {
-  //     reject(new Error('Failed to fetch data'));
-  //   } else {
-  //     setTimeout(() => {
-  //       resolve('Nice');
-  //     }, 5000)
-  //   }
-  // });
-
-
-

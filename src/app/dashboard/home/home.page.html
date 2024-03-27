@@ -1,0 +1,47 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Welcome {{username}}!</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-searchbar placeholder="Search"></ion-searchbar>
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>CLICK ME!</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+       
+          <ion-button id="open-loading">Show Loading</ion-button>
+          <ion-loading
+            trigger="open-loading"
+            message="Dismissing after 5 seconds..."
+            duration="5000"
+          ></ion-loading>
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+
+    <ion-card id="card">
+      <ion-card-header>
+        <ion-card-title>Pokemon regions API</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>Pokemon regions:</ion-card-content>
+    </ion-card>
+
+    <ion-list [inset]="true">
+      <ion-item *ngFor="let item of data">
+        <ion-label>{{item.name}}</ion-label>
+      </ion-item>
+    </ion-list>
+
+
+
+    <ion-button id="logout" class="ion-margin" (click)="logout()">
+      Log out
+    </ion-button>
+  </div>
+</ion-content>
