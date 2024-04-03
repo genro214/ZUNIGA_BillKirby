@@ -1,3 +1,7 @@
+h1 {
+  color: #000000; 
+}
+
 .inputs-container {
   display: flex;
   flex-direction: column;
@@ -6,6 +10,9 @@
   gap: 1rem;
   transform: translateY(40%);
 }
+
+
+
 #login {
   margin-top: 1rem;
 }
@@ -13,5 +20,9 @@
 .inputs-container ion-input {
   width: 100%;
 }
+.custom-alert {
+  --ion-color-alert-text: #ff0000; /* Change to the color you want */
+}
+
 
 
