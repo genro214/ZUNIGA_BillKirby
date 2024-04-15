@@ -1,0 +1,28 @@
+.output-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+  .grid-container {
+    width: 90%;
+    position: relative;
+    
+    justify-content: center;
+    margin: auto;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-right: 300px;
+    margin-left: 300px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  ion-header {
+    padding-top: 5rem;
+  }
+  
+  
+  ion-button{
+    size: 150px;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
