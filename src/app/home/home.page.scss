@@ -25,3 +25,25 @@
 #container a {
   text-decoration: none;
 }
+
+.bgkoto {
+  background-image: url('../home/images/bg1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.bgkoto h1 {
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: black;
+  margin-top: 0%;
+  color: red;
+}
